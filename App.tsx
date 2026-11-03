@@ -313,7 +313,7 @@ function PlanScreen({ ideas, day, sent, onDay, onRemove, onDiscover, onSend, onR
         <View style={styles.successMark}><Text style={styles.successMarkText}>✓</Text></View>
         <Text style={styles.eyebrow}>INVITATION READY</Text>
         <Text style={styles.successTitle}>Now the fun part.</Text>
-        <Text style={styles.successText}>Your private invitation is ready for Julie. She can choose from {ideas.length} ideas and confirm {chosenDay?.day}, {chosenDay?.date}.</Text>
+        <Text style={styles.successText}>Your private invitation is ready for NAME_OF_GUEST. She can choose from {ideas.length} ideas and confirm {chosenDay?.day}, {chosenDay?.date}.</Text>
         <View style={styles.shareCard}><Text style={styles.shareLabel}>PRIVATE PREVIEW LINK</Text><Text style={styles.shareLink}>datebook.local/invite/d8f2</Text></View>
         <PrimaryButton label="Share prototype link" onPress={() => Share.share({ message: 'A mock Datebook invitation: https://datebook.local/invite/d8f2' })} dark />
         <Pressable style={styles.resetButton} onPress={onReset}><Text style={styles.resetButtonText}>Back to invitation</Text></Pressable>
@@ -396,7 +396,7 @@ function ProfileScreen({ signedIn, onSignIn }: { signedIn: boolean; onSignIn: ()
       <ScreenHeader eyebrow="YOUR PRIVATE CORNER" title="The two of us" />
       <View style={styles.coupleCard}>
         <View style={styles.avatarStack}><View style={[styles.memberAvatar, styles.firstAvatar]}><Text style={styles.memberAvatarText}>M</Text></View><View style={[styles.memberAvatar, styles.secondAvatar]}><Text style={styles.memberAvatarText}>J</Text></View></View>
-        <Text style={styles.coupleTitle}>Manfred & Julie</Text>
+        <Text style={styles.coupleTitle}>Manfred & GUEST_NAME</Text>
         <Text style={styles.coupleText}>A small shared space for plans worth looking forward to.</Text>
         <View style={styles.memberPill}><Text style={styles.memberPillText}>Private · 2 members</Text></View>
       </View>
